@@ -1,13 +1,13 @@
 import mongoose from "mongoose"
 
 const jobsDetailSchema = new mongoose.Schema({
-      JobRole: {
+      jobRole: {
             type: String,
       },
       company: {
             type: String,
       },
-      workfrom: {
+      jobType: {
             type:String
       },
       salary: {
