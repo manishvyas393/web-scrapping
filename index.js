@@ -16,17 +16,17 @@ async function getJobDetails() {
 
                   let text = $(el).html()
                   console.log(text)
-                  // var str = text.replace(/(\r\n|\n|\r|\t)/gm, "");
+                  var str = text.replace(/(\r\n|\n|\r|\t)/gm, "");
 
 
-                  // let url = $(el).find("a").attr().href
-                  // let newUrl = url.replace('..', '');
-                  // const { data } = await axios.get(`https://web3.career${newUrl}`)
-                  // const $$ = cheerio.load(data)
-                  // $$(elemetSelect).each((id, ell) => {
-                  // let value = $$(ell).text()
-                  // console.log(value)
-                  // })
+                  let url = $(el).find("a").attr().href
+                  let newUrl = url.replace('..', '');
+                  const { data } = await axios.get(`https://web3.career${newUrl}`)
+                  const $$ = cheerio.load(data)
+                  $$(elemetSelect).each((id, ell) => {
+                  let value = $$(ell).text()
+                  console.log(value)
+                  })
 
 
             })
