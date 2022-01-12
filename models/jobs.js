@@ -14,7 +14,7 @@ const jobsDetailSchema = new mongoose.Schema({
             type: String,
       },
       caption: {
-            type:String,
+            type: String,
       },
       requirements: {
             type: String
@@ -27,9 +27,23 @@ const jobsDetailSchema = new mongoose.Schema({
       },
       extraSkills: {
             type: String,
+      },
+      source: {
+            type: String
+      },
+      updatedOn: {
+            type:String
+      },
+      createdon: {
+            type: Date,
+            default: Date.now()
+      },
+      active: {
+            type: Number,
+            default: 1
       }
 
 
 })
-const jobDetails = mongoose.model("job_detail", jobsDetailSchema)
+const jobDetails = mongoose.model("job_detail_news", jobsDetailSchema)
 export default jobDetails
