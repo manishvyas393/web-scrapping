@@ -1,24 +1,25 @@
-import express from "express";
 import axios from "axios";
 import * as cheerio from "cheerio";
 import dotenv from "dotenv"
 import mongoose from "mongoose"
 import Jobs from "./models/jobs.js"
 dotenv.config()
-mongoose.connect(process.env.Db_Url, () => console.log("connected"))
+mongoose.connect(process.env.Db_Url)
 async function getJobDetails() {
       try {
             let currentPage = 1;
 
             for (let i = currentPage; i <= currentPage; i++) {
-                  console.log(currentPage)
                   const url = `https://web3.career/?page=${i}`
                   const { data } = await axios.get(url, { ignoreWhitespace: true })
                   const $ = cheerio.load(data)
+
                   const ElementSelector = "body > main > div > div > div > div:nth-child(4) > table > tbody > tr";
                   const elemetSelect = "body > main > div > div > div.mx-auto"
                   const nextPage = "body > main > div > div > div > div.px-3 > div > nav.pagy-bootstrap-nav > ul";
+
                   $(nextPage).each((linkIndx, linkEl) => {
+                        console.log("data fetched from:",url);
                         let nextPageNo = parseInt($(linkEl).find("li.page-item.next>a").attr().href.replace("/?page=", ""))
                         $(ElementSelector).each(async (parentIdx, parentEl) => {
                               let role = $(parentEl).find("h2").text().trim()
@@ -29,6 +30,7 @@ async function getJobDetails() {
                               let url = $(parentEl).find("a").attr().href
                               let newUrl = url.replace('..', '');
                               let source = `https://web3.career${newUrl}`
+
                               const { data } = await axios.get(source)
                               const $$ = cheerio.load(data)
 
