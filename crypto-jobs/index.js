@@ -2,11 +2,12 @@ import axios from "axios";
 import * as cheerio from "cheerio"
 
 async function getCryptoJobs() {
+      let currentPage = 1;
 
-      try {
-            let currentPage = 1;
+      for (let i = currentPage; i <= currentPage; i++) {
+            try {
 
-            for (let i = currentPage; i <= currentPage; i++) {
+
                   const url = `https://crypto.jobs/?page=${currentPage}`
                   const { data } = await axios.get(url)
                   const $ = cheerio.load(data)
@@ -32,7 +33,6 @@ async function getCryptoJobs() {
                                     const detailSelector = "#app > div > div > div.col-md-8 > div.panel.panel-default"
                                     $$(detailSelector).each((childIdx, childEl) => {
                                           const detail = $$(childEl).find("p").text()
-                                          console.log(detail)
                                     })
 
                               }
@@ -40,9 +40,10 @@ async function getCryptoJobs() {
                         })
                         currentPage = nextPageNo;
                   })
-            }
-      } catch (error) {
 
+            } catch (error) {
+                  console.error(error)
+            }
       }
 
 }
