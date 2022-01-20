@@ -18,6 +18,12 @@ const cryptoJobsDetailSchema = new mongoose.Schema({
       location: {
             type: String
       },
+      skills: {
+            type:String
+      },
+      salary: {
+            type:String
+      },
       details: {
             type: String
       },
