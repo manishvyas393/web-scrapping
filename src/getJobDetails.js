@@ -1,11 +1,7 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
-import dotenv from "dotenv"
-import mongoose from "mongoose"
-import Jobs from "./models/jobs.js"
-dotenv.config()
-mongoose.connect(process.env.Db_Url)
-async function getJobDetails() {
+import Jobs from "../models/jobs.js"
+export  default async function getJobDetails() {
       try {
             let currentPage = 1;
 
@@ -84,4 +80,3 @@ async function getJobDetails() {
             console.error(error)
       }
 }
-getJobDetails();

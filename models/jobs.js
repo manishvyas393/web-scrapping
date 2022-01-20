@@ -10,6 +10,18 @@ const jobsDetailSchema = new mongoose.Schema({
       location: {
             type: String
       },
+      type: {
+            type: String
+      },
+      field: {
+            type: String
+      },
+      details: {
+            type: String,
+      },
+      contract: {
+            type: String
+      },
       salary: {
             type: String,
       },
@@ -32,7 +44,7 @@ const jobsDetailSchema = new mongoose.Schema({
             type: String
       },
       updatedOn: {
-            type:String
+            type: String
       },
       createdon: {
             type: Date,

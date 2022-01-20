@@ -1,11 +1,7 @@
 import axios from "axios";
 import * as cheerio from "cheerio"
-import mongoose from "mongoose"
-import dotenv from "dotenv"
-import cryptoJobsDetail from "./models/cryptoJobs.js"
-dotenv.config()
-
-async function getCryptoJobs() {
+import Jobs from "../models/jobs.js"
+export default async function getCryptoJobs() {
 
       let currentPage = 1;
       let breakFlag = 0
@@ -38,19 +34,19 @@ async function getCryptoJobs() {
                                           const detailSelector = "#app > div > div > div.col-md-8 > div.panel.panel-default"
                                           $$(detailSelector).each(async (childIdx, childEl) => {
                                                 const details = $$(childEl).find("div.panel-body > p").text().replace(/(\r\n|\n|\r)/gm, "");
-                                                const skills = $$(childEl).find("div.panel-body > div.row > div:nth-child(1) > p:nth-child(2)").text().trim().replace(/(\r\n|\n|\r|\t)/gm, " ").replace(/[^\x20-\x7E]/gmi, "");
+                                                const extraSkills = $$(childEl).find("div.panel-body > div.row > div:nth-child(1) > p:nth-child(2)").text().trim().replace(/(\r\n|\n|\r|\t)/gm, " ").replace(/[^\x20-\x7E]/gmi, "");
                                                 const salary = $$(childEl).find("div.panel-body > div.row > div:nth-child(2) > p:nth-child(2)").text().trim().replace(/(\r\n|\n|\r|\t)/gm, " ").replace(/[^\x20-\x7E]/gmi, "");
-                                                await cryptoJobsDetail.findOneAndDelete({ role, company, field, location }).then((data) => {
+                                                await Jobs.findOneAndDelete({ role, company, field, location }).then((data) => {
                                                       if (data) {
                                                             data.remove().then(() => {
-                                                                  new cryptoJobsDetail({
-                                                                        role, company, type, field, location, skills, salary, details, source, upDatedOn
+                                                                  new Jobs({
+                                                                        role, company, type, field, location, extraSkills, salary, details, source, upDatedOn
                                                                   }).save().then(() => console.log("updated"))
                                                             })
                                                       }
                                                       else {
-                                                            new cryptoJobsDetail({
-                                                                  role, company, type, field, location, skills, salary, details, source, upDatedOn
+                                                            new Jobs({
+                                                                  role, company, type, field, location,extraSkills, salary, details, source, upDatedOn
                                                             }).save().then(() => console.log("saved"))
                                                       }
                                                 })
@@ -70,4 +66,3 @@ async function getCryptoJobs() {
       }
       console.log("Completed")
 }
-mongoose.connect(process.env.Db_Url).then(() => getCryptoJobs())
