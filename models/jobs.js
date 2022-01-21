@@ -3,48 +3,63 @@ import mongoose from "mongoose"
 const jobsDetailSchema = new mongoose.Schema({
       role: {
             type: String,
+            default: ""
       },
       company: {
             type: String,
+            default: ""
       },
       location: {
-            type: String
+            type: String,
+            default: ""
       },
       type: {
-            type: String
+            type: String,
+            default: ""
       },
       field: {
-            type: String
+            type: String,
+            default: ""
       },
       details: {
             type: String,
+            default: ""
       },
       contract: {
-            type: String
+            type: String,
+            default: ""
       },
       salary: {
             type: String,
+            default: ""
       },
       caption: {
             type: String,
+            default: ""
       },
       requirements: {
-            type: String
+            type: String,
+            default: ""
       },
       roleResponsibilities: {
             type: String,
+            default: ""
       },
       qualification: {
             type: String,
+            default: ""
       },
       extraSkills: {
             type: String,
+            default: ""
       },
       source: {
-            type: String
+            type: String,
+            default: ""
       },
       updatedOn: {
-            type: String
+            type: String,
+            default: ""
       },
       createdon: {
             type: Date,
