@@ -1,7 +1,27 @@
+
+Más de USD 45 / hora
+USD 250 - 500
+USD 500 - 1.000
+Más de USD 45 / hora
+USD 100 - 250
+USD 15 - 45 / hora
+USD 1.000 - 3.000
+
 saved
 saved
 saved
 saved
+
+skipped
+Más de USD 45 / hora
+USD 250 - 500
+USD 500 - 1.000
+Más de USD 45 / hora
+USD 100 - 250
+USD 15 - 45 / hora
+USD 1.000 - 3.000
+
+skipped
 saved
 saved
 saved
@@ -27,8 +47,41 @@ saved
 saved
 saved
 saved
+
+skipped
+Más de USD 45 / hora
+USD 250 - 500
+USD 500 - 1.000
+Más de USD 45 / hora
+USD 100 - 250
+USD 15 - 45 / hora
+USD 1.000 - 3.000
+
+skipped
+
+skipped
+Más de USD 45 / hora
+USD 250 - 500
+USD 500 - 1.000
+Más de USD 45 / hora
+USD 100 - 250
+USD 15 - 45 / hora
+USD 1.000 - 3.000
+
+skipped
 saved
 saved
+
+skipped
+Más de USD 45 / hora
+USD 250 - 500
+USD 500 - 1.000
+Más de USD 45 / hora
+USD 100 - 250
+USD 15 - 45 / hora
+USD 1.000 - 3.000
+
+skipped
 saved
 saved
 saved
@@ -49,6 +102,17 @@ saved
 saved
 saved
 saved
+
+skipped
+Más de USD 45 / hora
+USD 250 - 500
+USD 500 - 1.000
+Más de USD 45 / hora
+USD 100 - 250
+USD 15 - 45 / hora
+USD 1.000 - 3.000
+
+skipped
 saved
 saved
 saved
@@ -57,6 +121,17 @@ saved
 saved
 saved
 saved
+
+skipped
+USD 15 - 45 / hora
+USD 500 - 1.000
+USD 100 - 250
+Más de USD 3.000
+USD 250 - 500
+USD 250 - 500
+USD 50 - 100
+
+skipped
 saved
 saved
 saved
@@ -138,6 +213,17 @@ saved
 saved
 saved
 saved
+
+skipped
+USD 15 - 45 / hora
+USD 500 - 1.000
+USD 100 - 250
+Más de USD 3.000
+USD 250 - 500
+USD 250 - 500
+USD 50 - 100
+
+skipped
 saved
 saved
 saved
@@ -177,6 +263,25 @@ saved
 saved
 saved
 saved
+updated
+
+skipped
+Menos de USD 50
+USD 250 - 500
+USD 1.000 - 3.000
+USD 500 - 1.000
+USD 100 - 250
+USD 1.000 - 3.000
+USD 250 - 500
+
+skipped
+updated
+updated
+updated
+updated
+updated
+updated
+updated
 saved
 saved
 saved
@@ -184,189 +289,21 @@ saved
 saved
 saved
 saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-data fetched from: https://web3.career/?page=1
-saved
-saved
-saved
-data fetched from: https://web3.career/?page=2
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-data fetched from: https://web3.career/?page=3
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-data fetched from: https://web3.career/?page=4
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-data fetched from: https://web3.career/?page=5
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-data fetched from: https://web3.career/?page=6
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
-saved
+
+skipped
+Menos de USD 50
+USD 250 - 500
+USD 1.000 - 3.000
+USD 500 - 1.000
+USD 100 - 250
+USD 1.000 - 3.000
+USD 250 - 500
+
+skipped
+updated
+updated
+updated
+updated
+updated
+updated
+updated

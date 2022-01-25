@@ -21,6 +21,10 @@ const jobsDetailSchema = new mongoose.Schema({
             type: String,
             default: ""
       },
+      bids: {
+            type: String,
+            default:""
+      },
       details: {
             type: String,
             default: ""
