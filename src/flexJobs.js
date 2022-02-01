@@ -19,4 +19,3 @@ async function flexJobs() {
             
       }
 }
-flexJobs()

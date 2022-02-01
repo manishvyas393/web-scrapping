@@ -64,5 +64,4 @@ export default async function weLoveGolangBlockchain() {
 
       }
 }
-weLoveGolangBlockchain()
 
