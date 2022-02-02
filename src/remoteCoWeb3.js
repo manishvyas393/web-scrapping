@@ -2,8 +2,9 @@ import axios from "axios";
 import Jobs from "../models/jobs.js"
 import * as cheerio from "cheerio"
 import scraperapiClient from 'scraperapi-sdk'
-
-const scrape = scraperapiClient("739ab9e75d7146f48a59b70e893d6351")
+import dotenv from "dotenv"
+dotenv.config()
+const scrape = scraperapiClient(process.env.api_key)
 export default async function remoteCoWeb3() {
       const response = await scrape.get('https://remote.co/remote-jobs/search/?search_keywords=web3', { render: true })
       const $ = cheerio.load(response)
@@ -29,21 +30,9 @@ export default async function remoteCoWeb3() {
                   const el = "body > main > div > div > div.col > div:nth-child(3)"
                   $$(el).each(async (childIdx, childEl) => {
                         const details = $(childEl).find("div > div.single_job_listing > div.job_description").html()
-                              await Jobs.findOneAndDelete({ role, company, location, source }).then(job => {
-                                    if (job) {
-                                          job.remove().then(() => {
-                                                new Jobs({
-                                                      role,
-                                                      company,
-                                                      location,
-                                                      source,
-                                                      details,
-                                                      updatedOn,
-                                                      contract
-                                                }).save().then(() => console.log("job updated"))
-                                          })
-                                    }
-                                    else {
+                        await Jobs.findOneAndDelete({ role, company, location, source }).then(job => {
+                              if (job) {
+                                    job.remove().then(() => {
                                           new Jobs({
                                                 role,
                                                 company,
@@ -52,11 +41,23 @@ export default async function remoteCoWeb3() {
                                                 details,
                                                 updatedOn,
                                                 contract
-                                          }).save().then(() => console.log("job added"))
-                                    }
+                                          }).save().then(() => console.log("job updated"))
+                                    })
+                              }
+                              else {
+                                    new Jobs({
+                                          role,
+                                          company,
+                                          location,
+                                          source,
+                                          details,
+                                          updatedOn,
+                                          contract
+                                    }).save().then(() => console.log("job added"))
+                              }
 
 
-                              })
+                        })
                   })
             }
 
