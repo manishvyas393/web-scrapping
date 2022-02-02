@@ -39,6 +39,7 @@ export default async function remoteOk() {
                   const el = "#jobsboard > tbody > tr.expand"
                   $$(el).each(async (chilIdx, childEl) => {
                         const details = $$(childEl).find("td > div > div.description").html()
+                        console.log(details)
                         await Jobs.findOneAndDelete({ role, company, location, source }).then(job => {
                               if (job) {
                                     job.remove().then(() => {
