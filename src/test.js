@@ -19,12 +19,17 @@ async function test() {
             const source = $(parentEl).prevAll("a").attr("href")
             links.push({ source })
 
-            for (let i = 0; i < links.length; i++) {
-                  const data = await scrape.get(links[i].source, { render: true })
-                  console.log(data)
+
+            for (let i = 1; i <= links.length; i++) {
+                  setTimeout(async() => {
+                        const res = await scrape.get(links[i].source,{ render: true })
+                        console.log(res)
+                  },1000)
             }
+
 
       })
 
 }
 test()
+
