@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
 import Jobs from "../models/jobs.js"
-export  default async function getJobDetails() {
+export default async function web3Career() {
       try {
             let currentPage = 1;
 

@@ -5,7 +5,7 @@ import scraperapiClient from 'scraperapi-sdk'
 import dotenv from "dotenv"
 dotenv.config()
 const scrape = scraperapiClient("739ab9e75d7146f48a59b70e893d6351")
-async function test() {
+async function jobsPresso(){
       let links = []
       const response = await scrape.get("https://jobspresso.co/remote-work/?search_keywords=blockchain", { render: true })
       const $ = cheerio.load(response)
@@ -31,5 +31,5 @@ async function test() {
       })
 
 }
-test()
+jobsPresso()
 

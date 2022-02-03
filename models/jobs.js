@@ -23,7 +23,7 @@ const jobsDetailSchema = new mongoose.Schema({
       },
       bids: {
             type: String,
-            default:""
+            default: ""
       },
       details: {
             type: String,
@@ -40,6 +40,9 @@ const jobsDetailSchema = new mongoose.Schema({
       caption: {
             type: String,
             default: ""
+      },
+      apply_url: {
+            type: String
       },
       requirements: {
             type: String,

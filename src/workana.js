@@ -3,8 +3,6 @@ import * as cheerio from "cheerio";
 import Jobs from "../models/jobs.js"
 export default async function workAna() {
       try {
-
-
             let tempPages;
             const { data } = await axios.get("https://www.workana.com/jobs?category=it-programming&language=en&skills=blockchain")
             const $ = cheerio.load(data)
