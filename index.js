@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 import dotenv from "dotenv"
-import {skipTheDriveWeb3,skipTheDriveBlockchain} from "./src/skipTheDrive.js"
+import {powerToflyBlockChain, powerToflyWeb3 } from "./src/powerToFly.js"
 dotenv.config()
 mongoose.connect(process.env.Db_Url,{ useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
-      skipTheDriveBlockchain().then(skipTheDriveWeb3())
+      powerToflyBlockChain().then(()=>powerToflyWeb3())
 })
