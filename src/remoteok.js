@@ -4,7 +4,6 @@ import * as cheerio from "cheerio"
 import mongoose from "mongoose"
 import dotenv from "dotenv"
 dotenv.config()
-mongoose.connect("mongodb+srv://manish393:manish393@cluster0.t5wpu.mongodb.net/web-scrapper?retryWrites=true&w=majority")
 export default async function remoteOk() {
       try {
             var config = {

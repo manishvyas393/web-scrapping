@@ -11,12 +11,10 @@ export async function powerToflyBlockChain() {
             const location = $(parentEl).find("div.info > span.location").text().trim().split("and")[0].replaceAll(/\s/g,"")
             const link = $(parentEl).find("div.info").parents("a").attr("href")
             const source = `https://powertofly.com${link}`
-            console.log(source)
             const { data } = await axios.get(source)
             const $$ = cheerio.load(data)
             const el = "#job-description"
             const details = $$(el).html()
-            console.log(details)
             await Jobs.findOneAndDelete({ role, company, location, source ,details}).then(job => {
                   if (job) {
                         job.remove().then(() => {
